@@ -56,6 +56,11 @@ O projeto foi estruturado da com ajuda da ferramenta [Spring Initializr](start.s
   - Sobre o OAuth2: Esse tipo de autenticação é quase como uma terceirização da autenticação, onde um serviço terceiro autentica o cliente. É o que está sendo usado em opções como "Login com Google".
   - Sobre JWT: É uma forma de autenticação que utiliza tokens em formato base64 validados; Esses tokens são fornecidos pela aplicação em si e são compostos pelas credenciais do usuário juntamente com metadados relevantes. Geralmente autenticação com tokens JWT utiliza mecanismo de "validade" para cada token; Fazendo com que, após a expiração de seu token, o usuário tenha que se autenticar novamente.
 
+### Actuator, Métricas e Health Check
+- Actuator: Fornece métricas, e informações relacionadas à saúde da aplicação pós-deploy.
+  - Após a inclusão da dependência no POM, já entra em efeito.
+  - Curiosamente, parece implementar HATEOAS... e eu achei que isso não existia de verdade 0.0
+
 ## Referências
 - [Martin Fowler - Richardson Maturity Model: Steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
 - [Beldung - Spring Boot With H2 Database](https://www.baeldung.com/spring-boot-h2-database)

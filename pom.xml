@@ -8,11 +8,10 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pg.decola_tech_avanade_2025.cursos</groupId>
-	<artifactId>arquitetura_rest_spring_web</artifactId>
+	<groupId>pg.decola_tech_avanade_2025.cursos.arquitetura_rest_spring_web</groupId>
+	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>arquitetura_rest_spring_web</name>
-	<description>Projeto de estudo.</description>
+	<name>arquitetura_rest_spring_web_api</name>
 	<url/>
 	<licenses>
 		<license/>
@@ -63,6 +62,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>3.1.5</version>
 		</dependency>
 	</dependencies>
 
