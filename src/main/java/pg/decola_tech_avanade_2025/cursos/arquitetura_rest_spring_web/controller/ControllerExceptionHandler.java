@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import pg.decola_tech_avanade_2025.cursos.arquitetura_rest_spring_web.exceptions.CompositeValidationException;
+import pg.decola_tech_avanade_2025.cursos.arquitetura_rest_spring_web.exceptions.EndpointNotYetImplementedException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +20,8 @@ import java.util.Map;
 */
 
 @ControllerAdvice
-public class ProductControllerAdvice extends ResponseEntityExceptionHandler {
-    @ExceptionHandler(EntityNotFoundException.class)
+public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
+    @ExceptionHandler({EntityNotFoundException.class, EndpointNotYetImplementedException.class})
     public ResponseEntity<Map<String, String>> handleEntityNotFoundException(EntityNotFoundException e) {
         Map<String, String> bodyContent = new HashMap<>() {{
             put("Mensagem", e.getMessage());

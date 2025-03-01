@@ -3,7 +3,7 @@ package pg.decola_tech_avanade_2025.cursos.arquitetura_rest_spring_web.exception
 import java.util.List;
 
 public class CompositeValidationException extends RuntimeException {
-    private List<String> messages;
+    private final List<String> messages;
 
     public CompositeValidationException(List<String> messages) {
         this.messages = messages;
