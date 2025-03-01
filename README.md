@@ -49,6 +49,13 @@ O projeto foi estruturado da com ajuda da ferramenta [Spring Initializr](start.s
   - Classes de `@ControllerAdvice` devem herdar de `ResponseEntityExceptionHandler`.
 - Annotation `@ExceptionHandler`: Permite, dentro de uma classe decorada com `@ControllerAdvice`, indicar métodos responsáveis por lidar com excessões específicas e retornar respostas de acordo.
   - Métodos de `@ExceptionHandler` devem especificar uma ou mais Exceptions às quais devem responder; Feito da seguinte maneira: `@ExceptionHandler(Exception.class)` ou `@ExceptionHandler({ExceptionClassA.class, ExceptionClassB.class})`.
+
+### Spring Security
+- Uma biblioteca do ecossistema Spring que fornece features de segurança pra projetos.
+- Fornece funções de autenticação (utilizando diversos formatos como Basic Auth, OAuth2, JWT, etc.), autorização e proteção contra ataques comuns.
+  - Sobre o OAuth2: Esse tipo de autenticação é quase como uma terceirização da autenticação, onde um serviço terceiro autentica o cliente. É o que está sendo usado em opções como "Login com Google".
+  - Sobre JWT: É uma forma de autenticação que utiliza tokens em formato base64 validados; Esses tokens são fornecidos pela aplicação em si e são compostos pelas credenciais do usuário juntamente com metadados relevantes. Geralmente autenticação com tokens JWT utiliza mecanismo de "validade" para cada token; Fazendo com que, após a expiração de seu token, o usuário tenha que se autenticar novamente.
+
 ## Referências
 - [Martin Fowler - Richardson Maturity Model: Steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
 - [Beldung - Spring Boot With H2 Database](https://www.baeldung.com/spring-boot-h2-database)
