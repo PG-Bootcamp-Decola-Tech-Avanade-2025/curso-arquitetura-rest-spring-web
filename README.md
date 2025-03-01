@@ -37,12 +37,18 @@ O projeto foi estruturado da com ajuda da ferramenta [Spring Initializr](start.s
   ```
 
 ## Padões, Conceitos Aplicados e Definições
+
 ### REST (REpresentational State Transfer)
 - Padrão arquitetural que visa facilitar a comunicação entre aplicações;
 - Suporta diferentes formatos para transferência de dados; Entre eles JSON, XML, Plain Text;
 - Define uma interface interface comum para interação com API via HTTP, fazendo uso dos verbos HTTP (POST, GET, etc.) em conjunto com separação dos recursos (como em: GET url.com/recurso);
 - RESTful: Sistema que implementa padrão arquitetural REST;
 
+### Exception Handling no Spring
+- Annotation `@ControllerAdvice`: Permite definir uma classe responsável por tratativa de excessões globalmente dentro da aplicação.
+  - Classes de `@ControllerAdvice` devem herdar de `ResponseEntityExceptionHandler`.
+- Annotation `@ExceptionHandler`: Permite, dentro de uma classe decorada com `@ControllerAdvice`, indicar métodos responsáveis por lidar com excessões específicas e retornar respostas de acordo.
+  - Métodos de `@ExceptionHandler` devem especificar uma ou mais Exceptions às quais devem responder; Feito da seguinte maneira: `@ExceptionHandler(Exception.class)` ou `@ExceptionHandler({ExceptionClassA.class, ExceptionClassB.class})`.
 ## Referências
 - [Martin Fowler - Richardson Maturity Model: Steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
 - [Beldung - Spring Boot With H2 Database](https://www.baeldung.com/spring-boot-h2-database)
